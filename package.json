@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.7",
+    "axios": "^1.6.8",
     "chart.js": "^4.1.1",
     "chartjs-react": "^4.2.1",
     "jotai": "^2.4.3",
@@ -19,6 +20,7 @@
     "react-chartjs-2": "^5.2.0",
     "react-chatbot-kit": "^2.2.2",
     "react-dom": "^18.2.0",
+    "react-file-icon": "^1.4.0",
     "react-json-pretty": "^2.2.0",
     "react-router-dom": "^6.17.0",
     "reactflow": "^11.10.4",
