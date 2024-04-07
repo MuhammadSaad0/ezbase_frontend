@@ -27,7 +27,7 @@ export const AdminSignupForm = ({ redirectTo }) => {
 	const navigate = useNavigate();
 
 	const handleSubmit = async (e) => {
-		e.preventDefault();
+		// e.preventDefault();
 		setError("");
 		setLoading(true);
 
@@ -53,12 +53,14 @@ export const AdminSignupForm = ({ redirectTo }) => {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
+				// 'Authorization': 'Bearer ' + window.localStorage.getItem('jwt')?.replace(/"/g, '')
 			},
 			body: JSON.stringify({ email, password }),
 		});
 
 		const resData = await res.json();
-
+		
+		console.log(resData);
 
 		if (resData.error) {
 			setError(resData.error);
