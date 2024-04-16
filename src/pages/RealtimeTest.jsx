@@ -69,7 +69,6 @@ const RealtimeTest = () => {
     realtimeService?.subscribe(collectionName,
       {}   //{"$and":[{"age":{"$gt":25}},{"male":true}]} query if we want to get records that match specific query leave empty for all records
       , (data) => {
-        console.log("datataa", data)
         updateCollectionData(data);
         //  may want to distinguish between 'recordAdded' and 'recordRemoved' by adding another field in the data sent by the server
       });
@@ -85,8 +84,10 @@ const RealtimeTest = () => {
   };
 
   return (
-    <div className="flex bg-gray-900 text-gray-50 h-screen max-h-screen">
+    <div className="flex bg-black-900 text-gray-50 h-screen max-h-screen">
       <SideRail />
+      <div className="w-[2px] h-screen bg-gray-100 opacity-10"></div>
+
       <div className="flex flex-col justify-center items-center w-full">
         <div className="p-4">
           <h1 className="text-3xl font-bold mb-4">Realtime Data Updates</h1>
